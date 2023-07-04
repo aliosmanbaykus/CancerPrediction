@@ -31,7 +31,7 @@ def create_model(data):
 
 
 def get_clean_data():
-    data = pd.read_csv(r'C:\Users\abayk\Masaüstü\CancerPredictionAPP\data\data.csv')
+    data = pd.read_csv('../CANCERPREDICTIONAPP/data/data.csv')
     
     data = data.drop(['Unnamed: 32', 'id'], axis=1)
 
@@ -45,9 +45,9 @@ def main():
 
     model, scaler = create_model(data)
 
-    with open('C:/Users/abayk/Masaüstü/CancerPredictionAPP/model/model.pkl', 'wb') as f:
+    with open('../CancerPredictionAPP/model/model.pkl', 'wb') as f:
         pickle.dump(model, f)
-    with open('C:/Users/abayk/Masaüstü/CancerPredictionAPP/model/scaler.pkl', 'wb') as f:
+    with open('../CancerPredictionAPP/model/scaler.pkl', 'wb') as f:
         pickle.dump(scaler, f)
 
 
